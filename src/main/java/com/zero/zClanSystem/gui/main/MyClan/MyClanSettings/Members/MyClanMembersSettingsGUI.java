@@ -78,6 +78,9 @@ public class MyClanMembersSettingsGUI {
                 String name = Bukkit.getOfflinePlayer(id).getName();
                 return name == null || !name.toLowerCase().contains(query);
             });
+
+            // 🔥 FIX: Nach dem Filtern IMMER Page 0 öffnen
+            page = 0;
         }
 
         int coOwnerPages = (int) Math.ceil(coOwners.size() / (double) MEMBER_SLOTS.length);

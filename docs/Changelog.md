@@ -246,3 +246,6 @@
 ### 5.1.6-alpha+build67
 - fixed Back button in myClan->Invites
 - added myClan->Members GUI and Search
+
+### 5.1.6-alpha+build68
+- MemberLists sort fixed
