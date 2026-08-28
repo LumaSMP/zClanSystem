@@ -1,0 +1,35 @@
+package com.zero.zClanSystem.gui.main.admin.ClanSelect.ClanModify;
+
+import com.zero.zClanSystem.gui.GUIType;
+import com.zero.zClanSystem.gui.GUIUtils;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.inventory.InventoryClickEvent;
+import org.bukkit.event.inventory.InventoryDragEvent;
+
+public class AdminClanModifyMenuGUIBlockListener implements Listener {
+
+    @EventHandler
+    public void onClick(InventoryClickEvent e) {
+
+        var top = e.getView().getTopInventory();
+        if (GUIUtils.getType(top) != GUIType.ADMIN_CLAN_MODIFY) return;
+
+        String title = e.getView().getTitle();
+        if (!title.startsWith(AdminClanModifyMenuGUI.TITLE_PREFIX)) return;
+
+        e.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onDrag(InventoryDragEvent e) {
+
+        var top = e.getView().getTopInventory();
+        if (GUIUtils.getType(top) != GUIType.ADMIN_CLAN_MODIFY) return;
+
+        String title = e.getView().getTitle();
+        if (!title.startsWith(AdminClanModifyMenuGUI.TITLE_PREFIX)) return;
+
+        e.setCancelled(true);
+    }
+}

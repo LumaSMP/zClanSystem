@@ -1,0 +1,88 @@
+# ══════════════════════════════════════════════════════════════════════════════
+#     ▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄     ▄▄▄▄▄
+#     ▀▀▀▀▀████  ███▀▀▀▀▀ ███▀▀███▄ ▄███████▄   C L A N - S Y S T E M
+#         ▄███▀  ███▄▄    ███▄▄███▀ ███   ███   C O N F I G U R A T I O N
+#       ▄███▀    ███      ███▀▀██▄  ███▄▄▄███
+#     █████████  ▀███████ ███  ▀███  ▀█████▀  Discord & Modrinth: xzeroxx0
+# ══════════════════════════════════════════════════════════════════════════════
+# Created by a solo developer. For issues, report on my Discord: dsc.gg/xzerox
+# ══════════════════════════════════════════════════════════════════════════════
+config-version: 2.0
+
+# you can find the clans in the clans.yml file
+
+
+# if your server is using the TAB Plugin or any other Plugin that overwrites suffixes, then make sure to install
+# PlaceholderAPI to easily set a Placeholder
+
+# here's what you'll need: '%clan_suffix%'
+
+# for example (original groups.yml of TAB v6.0.1):
+
+#Owner:
+#  tabprefix: "&0&l[&a&lOwner&0&l] &a"
+#  tagprefix: "&2&lOwner &a"
+
+#Player:
+#  tabprefix: "&0&l[&7&lPlayer&0&l] &3"
+#  tagprefix: "&2&lPlayer &3"
+#  customtabname: "%player%"
+#  tabsuffix: "%clan_suffix%"
+#  tagsuffix: "%clan_suffix%"
+
+# default settings for all groups
+#_DEFAULT_:
+#  tabprefix: "%luckperms-prefix%"
+#  tagprefix: "%luckperms-prefix%"
+#  customtabname: "%player%"
+#  tabsuffix: "%clan_suffix%"
+#  tagsuffix: "%clan_suffix%"
+
+#per-world:
+#  world1:
+#    Owner:
+#      tabprefix: "&0&l[&a&lOwner&0&l] &a"
+#      tagprefix: "&2&lOwner &a"
+#      customtabname: "%player%"
+#      tabsuffix: "%clan_suffix%"
+#      tagsuffix: "%clan_suffix%"
+
+
+# max length of the clan-tag | default: 3 | recommended: 1-4
+max-tag-length: 3
+
+# how long does it take for an invitation to expire
+# time is calculated in minutes
+Invite-Expire: true
+Invite-Expire-Time: 1
+
+# GUI -> open a GUI with /clan and disable all subcommands
+# COMMAND -> use commands and subcommands instead of a GUI
+# note: COMMAND is old and doesn't support the admin permission and everything below this. Not recommended!
+# note: since COMMAND is outdated, it doesn't apply using the reload button inside the AdminMenu
+command-system: GUI
+
+# NONE -> creating a clan is free
+# ITEM -> creating a clan costs items
+clan-create-cost: NONE
+
+# add as many items as you want
+clan-create-item-cost:
+  - material: DIAMOND
+    amount: 5
+  - material: EMERALD
+    amount: 10
+
+
+# config the amount of points a clan gets:
+# base-points -> per member
+# kill-points -> per kill a member has
+# death-points -> per death a member has
+# teamkill-points -> per teamkill (friendly fire: false & existance is secret for players)
+# tagcolor-bonus -> bonus a clan gets when having a teamcolor
+clan-score:
+  base-points: 4
+  kill-points: 6
+  death-points: -2
+  teamkill-points: -4
+  tagcolor-bonus: 30

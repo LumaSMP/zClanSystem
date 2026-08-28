@@ -1,0 +1,19 @@
+name: zClanSystem
+version: ${project.version}
+main: com.zero.zClanSystem.zClanSystem
+api-version: '1.21'
+author: Zero
+
+softdepend:
+  - PlaceholderAPI
+  - Vault
+
+commands:
+  clan:
+    description: Clan system main command
+    usage: /clan
+
+permissions:
+  clansystem.admin:
+    description: Allows access to the ClanSystem admin menu
+    default: op
